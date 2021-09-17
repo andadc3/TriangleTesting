@@ -3,7 +3,9 @@ pipeline {
 	stages {
 		stage ('build') {
 			steps {
-				echo 'Building..'
+				echo 'Starting build process...'
+			    bat 'make'
+				echo 'Build process complete'
 			}
 		}
 		stage ('test') {
