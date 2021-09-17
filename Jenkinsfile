@@ -36,7 +36,7 @@ pipeline {
 				// MSBuild.exe must exist in windows environment variables;
 				// Params for msbuild.exe can be understood here https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-command-line-reference
 				// The clean is instructed by /t:clean
-				bat "msbuild.exe ${workspace}\\TriangleTesting.sln -nologo /p:platform=\"x64\" /p:configuration=\"release\" /t:clean"
+				bat "\"${tool 'MSBuildVS2019'}\\msbuild\" ${workspace}\\TriangleTesting.sln -nologo /p:platform=\"x64\" /p:configuration=\"release\" /t:clean"
 			}
 		}
 		stage ('Build') {
