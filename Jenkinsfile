@@ -11,7 +11,7 @@ pipeline {
 		stage ('test') {
 			steps {
 				echo 'Starting testing process...'
-				bat "dotnet test TriangleTesting\\Test.TriangleTesting.csproj"
+				bat "dotnet test Test.TriangleTesting\\Test.TriangleTesting.csproj"
 				echo 'Testing process complete'
 			}
 		}
