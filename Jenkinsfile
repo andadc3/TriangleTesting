@@ -23,7 +23,7 @@ pipeline {
 		stage ('Package Restore') {
 			steps {
 				// Once the code is retrieved, ensure it has all the packages it needs in order to build
-				bat "dotnet restore ${workspace}\\first-jenkins-pipeline\\TriangleTesting.sln"
+				bat "dotnet restore ${workspace}\\first-jenkinsfile-pipeline\\TriangleTesting.sln"
 			}
 		}
 		stage ('Build') {
