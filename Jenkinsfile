@@ -4,13 +4,15 @@ pipeline {
 		stage ('build') {
 			steps {
 				echo 'Starting build process...'
-			    dotnet build
+			    bat "dotnet build TriangleTesting\\TriangleTesting.csproj --configuration Release"
 				echo 'Build process complete'
 			}
 		}
 		stage ('test') {
 			steps {
-				echo 'Testing..'
+				echo 'Starting testing process...'
+				bat "dotnet test TriangleTesting\\Test.TriangleTesting.csproj"
+				echo 'Testing process complete'
 			}
 		}
 		stage('deploy') {
