@@ -4,7 +4,7 @@ pipeline {
 		stage ('build') {
 			steps {
 				echo 'Starting build process...'
-			    bat 'make'
+			    dotnet build
 				echo 'Build process complete'
 			}
 		}
