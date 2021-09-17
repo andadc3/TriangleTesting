@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	environment {
-       env.PATH = "${env.PATH};C:\\Windows\\System32"
+       env.Path = "${env.Path};C:\\Windows\\System32"
    }
 	stages {
 		stage ('build') {
